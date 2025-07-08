@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Theme/Post Style.css">
+    <link rel="stylesheet" href="/Theme/Desi category style.css">
+</head>
+<body>
+    <!-- ✅ Header -->
+    <div id="header"></div>
+    <!-- ✅ Page Content -->
+     <section style="text-align: center;">
+     <H1>Categories</H1>
+     <p>Sort out your favourite food by category.</p></section>
+    <section class="grid-desi-images">
+        <a href="/Posts/DESI/Desi.html">
+            <div class="image-container" data-title="DESI Food">
+                <img src="/Pages/Category page/Desi Food.jpg" alt="DESI FOOD">
+            </div>
+        </a>
+        <a href="/Posts/Chinese/Chinese.html">
+            <div class="image-container" data-title="Chinese Food">
+                <img src="/Pages/Category page/Chinese Food.jpg" alt="Chinese Food">
+            </div>
+        </a>
+        <a href="/Posts/Italian/Italian.html">
+            <div class="image-container" data-title="Italian Food">
+                <img src="/Pages/Category page/Italian Food.jpg" alt="Italian Food">
+            </div>
+        </a>
+        <a href="/Posts/Arab/Arab.html">
+            <div class="image-container" data-title="Arab Food">
+                <img src="/Pages/Category page/Arab food.jpg" alt="Arab Food">
+            </div>
+        </a>
+       </section>
+<!----------------FOOTER------------------->
+<div id="footer"></div>
+    <!-- ✅ Fetch Header and Footer -->
+    <script>
+        fetch('/Theme/Header%20%26%20Footer/Header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    
+        fetch('/Theme/Header%20%26%20Footer/Footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+</html>

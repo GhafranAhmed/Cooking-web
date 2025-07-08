@@ -1,0 +1,26 @@
+[
+    {
+      "title": "Chicken Biryani",
+      "description": "Indulge in this rich and decadent chocolate fudge cake recipe.",
+      "image": "/Posts/Desi/chicken biryani/Biryani.jpg",
+      "link": "/Posts/Desi/chicken biryani/biryani.html"
+    },
+    {
+      "title": "Mutton Biryani",
+      "description": "A quick and easy pasta dish that's bursting with flavor.",
+      "image": "/Posts/Desi/Mutton biryani/Mutton Biryani.jpg",
+      "link": "/Posts/Desi/Mutton biryani/Mutton biryani.html"
+    },
+    {
+      "title": "Falafel",
+      "description": "Learn how to make crispy and flavorful falafel at home with this easy-to-follow recipe. Perfect for pita sandwiches, salads, or snacking!",
+      "image": "/Posts/Arab/Falafel/Falafel.jpg",
+      "link": "/Posts/Arab/Falafel/falafel recipe.html"
+    },
+    {
+      "title": "Lasagna",
+      "description": "Today, we’re making Italian Lasagna the real deal, straight from the heart of Italy! Now, I won’t lie to you this recipe takes some work. But trust me, once you take that first bite of rich, cheesy, saucy goodness, you’ll know it was all worth it. So, roll up your sleeves, grab a glass of wine (because why not?), and let’s get cooking!",
+      "image": "/Posts/Italian/Lasagna/Italian Lasagna.jpg",
+      "link": "/Posts/Italian/Lasagna/Lasagna.html"
+}
+]

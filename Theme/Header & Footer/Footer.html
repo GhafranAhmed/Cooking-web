@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cooking Website Footer</title>
+  <style>
+    /* ✅ Footer Styling */
+    .footer-container {
+      margin-top: 10%;
+      margin-bottom: 0%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .footer-logo {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+
+    .footer-links li {
+      position: relative;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #ffcc80;
+    }
+
+    /* ✅ Copyright Text */
+    .footer-text {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    /* ✅ Mobile Responsive */
+    @media (max-width: 768px) {
+      .footer-links {
+        flex-direction: column;
+        text-align: center;
+      }
+
+     
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const categoryLi = document.querySelector('.footer-links li:nth-child(4)');
+      const categoryLink = categoryLi.querySelector('a');
+      const categoryDropdown = categoryLi.querySelector('.footer-dropdown');
+      const dropdownLinks = categoryDropdown.querySelectorAll('a');
+
+      //   Accessibility: Focus management
+
+      categoryLink.setAttribute('aria-haspopup', 'true');
+      categoryLink.setAttribute('aria-expanded', 'false');
+
+      categoryLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        categoryDropdown.style.display = categoryDropdown.style.display === 'block' ? 'none' : 'block';
+        this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+      });
+
+      //   Close dropdown on outside click
+      document.addEventListener('click', function(e) {
+        if (!categoryLi.contains(e.target)) {
+          categoryDropdown.style.display = 'none';
+          categoryLink.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      //   Keyboard navigation
+      categoryLink.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          categoryDropdown.style.display = 'block';
+          this.setAttribute('aria-expanded', 'true');
+          dropdownLinks[0].focus();
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-logo">Cooking Recipes</div>
+      <ul class="footer-links">
+        <li><a href="/Pages/index.html">Home</a></li>
+        <li><a href="/Pages/about us/about us.html">About</a></li>
+        <li><a href="/Pages/Contact Us.html">Contact</a></li>
+        <li>
+          <a href="/Pages/Category page/Categorypage.html" aria-haspopup="true" aria-expanded="false">Categories</a>
+        </li>
+      </ul>
+      <p class="footer-text">© 2025 Cooking Recipes. All rights reserved.</p>
+    </div>
+  </footer>
+  </body>
+
+</html>

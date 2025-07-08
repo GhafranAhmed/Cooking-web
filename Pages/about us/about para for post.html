@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General container styling */
+        .author-info-container {
+            margin-top: 3%;
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Vertically center items */
+            padding: 15px;
+            margin-bottom: 20px; /* Spacing below the container */
+            background-color: #f8f8f8; /* Light background */
+            border-radius: 8px; /* Rounded corners */
+            border: 1px solid #ddd; /* Light border */
+        }
+        
+        /* Avatar styling (if you add an image) */
+        .author-avatar {
+            width: 80px; /* Adjust size as needed */
+            height: 80px;
+            border-radius: 50%; /* Make it round */
+            margin-right: 15px; /* Spacing between avatar and text */
+            margin-bottom: 10px;
+            /* Add background-image here if you want to include an image*/
+        }
+        
+        /* Text styling */
+        .author-text {
+            flex: 1; /* Allow text to take up remaining space */
+        }
+        
+        .author-bio {
+            font-size: 0.9em;
+            color: #555; /* Slightly darker text */
+        }
+        .author-avatar {
+    /* ... other styles ... */
+    height: 50px;
+        }
+        
+        /* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    img {
+        /* float: none;  Removed float */
+        margin: 0 auto 20px auto; /* Centers the image */
+        display: block;
+        max-width: 100%;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+        </style>
+</head>
+<body>
+ <div id="author">
+    <div class="author-info-container">
+            <h6 style="margin-top: 0; text-align: start; font-size: x-small; color:grey"class="author-name">Post Author is</h6>
+            <br>
+            <div class="author-avatar">
+                <img style=" margin-top: 0; margin-bottom: 30px; margin-left: 30px; margin-right: 20px; height: 70px; width: 40px; border-radius: 50%;" src="/Pages/about us/Chef Ghafran Ahmed.png" alt="about me">
+            </div>
+            <div class="author-text">
+                <p class="author-bio">I'm Ghafran Ahmed, a passionate home chef with two years of experience in international restaurants. I created Global Food 360 to help you cook authentic global recipes with confidence. Let’s make delicious food together.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

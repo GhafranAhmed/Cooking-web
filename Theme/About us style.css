@@ -1,0 +1,58 @@
+/* General Styles */
+body {
+    font-family: sans-serif; /* You can change this to your preferred font */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-left: 10%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Image Styling and Layout */
+img {
+    float: right; /* Image floats to the right */;
+    margin: 10% 10% 0px 0px; /* Top Right Bottom Left */
+    border-radius: 50%; /* Makes the image round */
+    border: 5px solid #e67e22; /* Adds the border */
+    max-width: 300px; /* Maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 600px) {
+    img {
+        float: none; /* Image takes full width */
+        margin: 30px auto 0 auto; /* Centers the image */
+        display: block;
+        max-width: 50%; /* Image takes full width */
+    }
+
+    main {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+}

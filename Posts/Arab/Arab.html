@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arab Recipes</title>
+    <link rel="stylesheet" href="/Theme/Post Style.css">
+    <link rel="stylesheet" href="/Theme/Desi category style.css">
+    <link rel="stylesheet" href="/Theme/Buttons.css">
+</head>
+<body>
+<div id="header"></div>
+<section style="text-align: center;">
+    <h1>Arab Food Recipes</h1>
+    <p>Dum pukath, Roasts, BBQ and much more!</p></section>
+    <section class="grid-desi-images">
+        <a href="/Posts/Arab/Falafel/falafel recipe.html">
+            <div class="image-container" data-title="Falafel">
+                <img src="/Posts/Arab/Falafel/Falafel.jpg" alt="falafel">
+            </div>
+        </a>
+       </section>
+    <br>
+    <div class="button-wrapper"> <div class="btn">
+        <button>
+            <a href="/Pages/Category page/Categorypage.html">← Back to Categories</a>
+        </button>
+    </div>
+    <div class="btn">
+        <button>
+            <a href="/Posts/DESI/Desi.html">DESI</a>
+        </button>
+    </div>
+</div>
+    <div id="footer"></div>
+    <script>
+        fetch('/Theme/Header%20%26%20Footer/Header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    
+        fetch('/Theme/Header%20%26%20Footer/Footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+
+</html>

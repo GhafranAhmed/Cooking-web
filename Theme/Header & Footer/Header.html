@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Website</title>
+    <style>
+        /* ✅ Basic Navbar Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            transition: background-color 0.5s ease; /* Smooth transition */
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc80;
+        }
+
+        /* ✅ Dropdown Styling */
+
+        .dropdown-content {
+            display: none;
+            border-radius: 10%;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            min-width: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* ✅ Search Bar Styling */
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 5px;
+        }
+
+        .search-bar button {
+            padding: 8px 12px;
+            border: none;
+            background-color: #f0f0f0;
+            /* A light color */
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* ✅ Mobile Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                /* Align items to the start */
+            }
+
+            .nav-links {
+                flex-direction: row;
+                /* Display links in a row */
+                text-align: left;
+                order: 2;
+                /* Move links below logo */
+            }
+
+            .nav-links li {
+                margin: 5px 10px;
+                /* Reduced margin */
+            }
+
+            .search-bar {
+                width: 100%;
+                /* Full width on mobile */
+                margin-top: 10px;
+                order: 1;
+                /* Move search bar above logo */
+            }
+
+            .search-bar input[type="text"] {
+                width: 70%;
+                /* Take most of the width */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="header">
+        <div class="logo">Cooking Recipes</div>
+        <ul class="nav-links">
+            <li><a href="/Pages/index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="/Pages/Category page/Categorypage.html">Categories ▼</a>
+                <div class="dropdown-content">
+                    <a href="/Posts/DESI/Desi.html">Desi</a>
+                    <a href="/Posts/Chinese/Chinese.html">Chinese</a>
+                    <a href="/Posts/Italian/Italian.html">Italian</a>
+                    <a href="/Posts/Arab/Arab.html">Arab</a>
+                </div>
+            </li>
+            <li><a href="/Pages/about us/about us.html">About</a></li>
+            <li><a href="/Pages/Contact Us.html">Contact</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="Search recipes...">
+            <button type="submit">Search</button>
+        </div>
+    </nav>
+    </body>
+<script>
+    // Function to get the average color of an image (as before)
+function getAverageImageColor(imageElement) {
+    // ... (same code as provided before)
+}
+
+//  Search Functionality
+function filterRecipes(searchTerm) {
+    searchTerm = searchTerm.toLowerCase();
+    const recipes = document.querySelectorAll('.featured-recipe, .grid-item'); // Select all recipe containers
+
+    recipes.forEach(recipe => {
+        const titleElement = recipe.querySelector('.recipe-title h3');
+        const title = titleElement.textContent.toLowerCase();
+
+        if (title.includes(searchTerm)) {
+            recipe.style.display = ''; // Show the recipe
+        } else {
+            recipe.style.display = 'none'; // Hide the recipe
+        }
+    });
+}
+
+(function() {
+    const header = document.getElementById('header');
+    const firstSlideImage = document.querySelector('#recipe-slider .slide img');
+    const searchInput = document.querySelector('.search-bar input[type="text"]');
+
+    function setHeaderBackgroundColor() {
+        if (header && firstSlideImage) {
+            const avgColor = getAverageImageColor(firstSlideImage);
+            header.style.backgroundColor = avgColor;
+        }
+    }
+
+    setHeaderBackgroundColor();
+
+    const sliderPrevButton = document.querySelector('#recipe-slider .prev-button');
+    const sliderNextButton = document.querySelector('#recipe-slider .next-button');
+
+    if (sliderPrevButton && sliderNextButton) {
+        sliderPrevButton.addEventListener('click', () => {
+            // Your existing slider code...
+            setTimeout(setHeaderBackgroundColor, 500);
+        });
+
+        sliderNextButton.addEventListener('click', () => {
+            // Your existing slider code...
+            setTimeout(setHeaderBackgroundColor, 500);
+        });
+    }
+
+    window.addEventListener('resize', setHeaderBackgroundColor);
+    firstSlideImage.onload = setHeaderBackgroundColor;
+
+    //  Search Functionality
+    if (searchInput) {
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value;
+            filterRecipes(searchTerm);
+        });
+    }
+})();
+</script>
+</html>

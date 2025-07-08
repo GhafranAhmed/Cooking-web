@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - GlobalFood360</title>
+    <link rel="stylesheet" href="/Theme/Post Style.css">
+    <link rel="stylesheet" href="/Theme/About%20Us%20Style.css">
+
+</head>
+<body>
+<div id="header"></div>
+
+<img src="/Pages/about us/Chef Ghafran Ahmed.png" alt="Global Food 360 About">
+<main>
+    <h1>About Me</h1>
+
+    <p>Hi, I’m Ghafran Ahmed and welcome to GlobalFood360. I’m a passionate home chef with two years of experience in international restaurants. I know what it feels like to be afraid of cooking dishes that seem too foreign, I've been there too. I used to worry that I couldn’t get the taste right, whether it was preparing Desi food or any other global cuisine. Over time, I learned that with the right recipes and a little practice, anyone can bring authentic flavors into their kitchen.</p>
+
+    <h2>At GlobalFood360</h2>
+
+    <p>At GlobalFood360, I share easy and quick recipes from around the world. I try to make each dish in simple steps, even showing you how to make key ingredients like sauces and Desi ghee at home. My goal is to help you overcome your cooking fears and confidently try out new recipes.</p>
+
+    <h2>Remember</h2>
+
+    <p>It's all about enjoying the process and sharing love through food. Keep up the spirit of cooking. Cook confidently at home for your family because when you try new recipes and flavors, you not only nourish your loved ones but also grow as a cook. Remember, everyone can be a chef with a little passion and practice.</p>
+
+    <p>I also welcome you to share your recipes or ask for a dish you’d like to see by reaching me through <a href="/Pages/Contact Us.html">Contact page.</a> I always welcome love and suggestions from my readers.</p>
+
+    <p><strong>Thank you!</strong> For being here, I would like to see you again.</p>
+</main>
+
+<div id="footer"></div>
+<!-- ✅ Fetch Header and Footer -->
+<script>
+    fetch('/Theme/Header%20%26%20Footer/Header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch('/Theme/Header%20%26%20Footer/Footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+</body>
+</html>

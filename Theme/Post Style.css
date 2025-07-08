@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #444;
+}
+
+/* Container Layout */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 270px 1fr 300px;
+    grid-gap: 20px;
+}
+
+/* Header & Footer with Shiny Effect */
+header, footer {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin-top: 3%;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Main Content */
+main {
+    grid-column: 2;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Sidebar */
+aside {
+    grid-column: 3;
+    background-color: #f8d57c;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Table of Contents */
+.toc-container {
+    width: 350px;
+    float: left;
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    background: transparent;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#toc ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#toc li {
+    margin-bottom: 8px;
+}
+
+#toc a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#toc a:hover {
+    background: #ffcc99;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    color: #d35400;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.8em;
+    border-bottom: 4px solid #e67e22;
+    padding-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #ff5733;
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #c0392b;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.1em;
+    word-wrap: break-word;
+    color: #555;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    background: #fff5e6;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f7c08a;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c0392b;
+}
+
+/* Links */
+a {
+    color: #ff5733;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #d35400;
+}
+
+.post-content img {
+    height: 400px;
+    width: 600px;
+}

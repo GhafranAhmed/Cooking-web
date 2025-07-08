@@ -1,0 +1,143 @@
+/* styles.css */
+
+/* =================================
+   General Styles
+   ================================= */
+
+   body {
+    font-family: sans-serif; /* Use a sans-serif font */
+    margin: 0;
+    padding: 0;
+}
+
+/* =================================
+   Grid Styles
+   ================================= */
+
+.grid-desi-images {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns, equal width */
+    grid-gap: 20px; /* Spacing between grid items */
+    max-width: 800px; /* Limit the width of the grid */
+    margin: 0 auto; /* Center the grid horizontally */
+}
+
+/* =================================
+   Image Container Styles
+   ================================= */
+
+.image-container {
+    position: relative; /* Position relative for absolute positioning of image and overlay */
+    overflow: hidden; /* Clip content that overflows */
+    height: 0; /* Maintain 1:1 aspect ratio */
+    padding-bottom: 100%; /* Maintain 1:1 aspect ratio */
+}
+
+/* =================================
+   Image Styles
+   ================================= */
+
+.image-container img {
+    width: 100%; /* Make images fill their container */
+    height: 100%; /* Make images fill their container */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    position: absolute; /* Position the image */
+    top: 0; /* Position the image */
+    left: 0; /* Position the image */
+    transition: opacity 0.3s ease; /* Add transition for darkening */
+}
+
+.image-container:hover img {
+    opacity: 0.6; /* Darken the image on hover */
+}
+
+/* =================================
+   Overlay Styles
+   ================================= */
+
+   .image-container::before {
+    content: ""; /* Empty content */
+    position: absolute; /* Position the overlay */
+    top: 0; /* Cover the entire container */
+    left: 0; /* Cover the entire container */
+    width: 100%; /* Cover the entire container */
+    height: 100%; /* Cover the entire container */
+    background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.image-container:hover::before {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+}
+
+/* =================================
+   Text Overlay Styles
+   ================================= */
+
+.image-container::after {
+    content: attr(data-title); /* Get the data-title attribute */
+    position: absolute; /* Position the text overlay */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center perfectly */
+    color: white; /* Text color */
+    font-size: 24px; /* Text size */
+    font-weight: bold; /* Bold text */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    z-index: 1; /* Ensure text is on top */
+}
+
+.image-container:hover::after {
+    opacity: 1; /* Show text on hover */
+}
+
+/* =================================
+   Link Styles
+   ================================= */
+
+.grid-desi-images a {
+    display: block; /* Make the entire link clickable */
+    text-decoration: none; /* Remove underlines from links */
+    color: #333; /* Default text color for links */
+    transition: opacity 0.3s ease; /* Smooth opacity transition on hover */
+}
+
+.grid-desi-images a:hover {
+    opacity: 1; /* Reset opacity on hover */
+}
+
+/* =================================
+   Responsiveness (adjust breakpoints as needed)
+   ================================= */
+   @media (max-width: 600px) {
+    .grid-desi-images {
+        grid-template-columns: 1fr; /* Stack images on smaller screens */
+    }
+
+    .image-container {
+        position: relative; /* Reset positioning */
+        height: auto; /* Reset height */
+        padding-bottom: 0; /* Reset padding */
+    }
+
+    .image-container img {
+        position: relative; /* Reset positioning */
+    }
+
+    .image-container::before {
+        display: none; /* Hide overlay */
+    }
+
+    .image-container::after {
+        position: static; /* Display text normally */
+        transform: none; /* Reset transform */
+        text-align: center; /* Center text */
+        color: #333; /* Dark text color */
+        font-size: 16px; /* Smaller text size */
+        font-weight: normal; /* Normal font weight */
+        opacity: 1; /* Always show text */
+        margin-top: 10px; /* Add spacing below image */
+        display: block; /* Add this line to make the text a block element */
+    }
+}

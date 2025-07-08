@@ -1,0 +1,36 @@
+<div class="toc-container">
+  <h1 style="text-align: center; font-size:x-large ;">Table of Content</h1>
+  <nav style="background-color: transparent;" id="toc">
+      </nav>
+</div>
+
+<script>
+    window.onload = function() {
+    generateToc();
+    };
+  
+    function generateToc() {
+    const toc = document.getElementById('toc');
+    const headings = document.querySelectorAll('h2');
+    let tocHTML = '<ul>';
+  
+    headings.forEach((heading, index) => {
+    const id = `toc-${index}`;
+    heading.id = id;
+    tocHTML += `<li><a href="#${id}">${heading.textContent}</a></li>`;
+    });
+  
+    tocHTML += '</ul>';
+    toc.innerHTML = tocHTML;
+    }
+  </script>
+
+
+--------------------TO LOAD HEADER AND FOOTER -----------------------------
+      fetch('/Theme/Header%20%26%20Footer/Header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch('/Theme/Header%20%26%20Footer/Footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data);  
