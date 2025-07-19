@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Your Chicken Karahi Doesn’t Taste Like the Restaurant? Try THIS!</title>
-  <link rel="stylesheet" href="/Theme/Post Style.css">
+  <link rel="stylesheet" href="Theme/Post Style.css">
 </head>
 <body>
 <div id="header"></div>
@@ -116,11 +116,11 @@
 </main>
 <div id="footer"></div>
 <script>
-  fetch('/Theme/Header%20%26%20Footer/Header.html')
+  fetch('Theme/Header%20%26%20Footer/Header.html')
       .then(response => response.text())
       .then(data => document.getElementById("header").innerHTML = data);
 
-  fetch('/Theme/Header%20%26%20Footer/Footer.html')
+  fetch('Theme/Header%20%26%20Footer/Footer.html')
       .then(response => response.text())
       .then(data => document.getElementById("footer").innerHTML = data);
 
