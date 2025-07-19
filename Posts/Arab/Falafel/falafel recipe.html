@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Falafel Recipe: Step-by-Step Guide to Crispy Perfection</title>
-    <link rel="stylesheet" href="/Theme/Post Style.css">
+    <link rel="stylesheet" href="Theme/Post Style.css">
 
 </head>
 <body>
@@ -26,7 +26,7 @@
 
     <p>Falafel is a super popular food from the Middle East. It's basically a ball of chickpeas and herbs that's crispy on the outside but soft and fluffy inside. And the cool thing is, you can use it in so many ways. Throw it in a pita, make a salad, or just eat it as a snack.   </p>
 
-    <img src="/Posts/Arab/Falafel/Falafel.jpg" alt="Falafel">
+    <img src="Posts/Arab/Falafel/Falafel.jpg" alt="Falafel">
 
     <h2>Why Make Falafel Yourself?</h2>
 
@@ -178,14 +178,14 @@
 
 
 <script>
-      fetch('/Theme/Header%20%26%20Footer/Header.html')
+      fetch('Theme/Header%20%26%20Footer/Header.html')
         .then(response => response.text())
         .then(data => document.getElementById("header").innerHTML = data);
 
-    fetch('/Theme/Header%20%26%20Footer/Footer.html')
+    fetch('Theme/Header%20%26%20Footer/Footer.html')
         .then(response => response.text())
         .then(data => document.getElementById("footer").innerHTML = data);  
-    fetch('/Pages/about us/about para for post.html')
+    fetch('Pages/about us/about para for post.html')
         .then(response => response.text())
         .then(data => document.getElementById("author").innerHTML = data);
   window.onload = function() {
