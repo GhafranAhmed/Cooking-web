@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chinese Recipes</title>
-    <link rel="stylesheet" href="/Theme/Post Style.css">
-    <link rel="stylesheet" href="/Theme/Desi category style.css">
-    <link rel="stylesheet" href="/Theme/Buttons.css">
+    <link rel="stylesheet" href="Theme/Post Style.css">
+    <link rel="stylesheet" href="Theme/Desi category style.css">
+    <link rel="stylesheet" href="Theme/Buttons.css">
 </head>
 <body>
 <div id="header"></div>
@@ -14,9 +14,9 @@
     <h1>Chinese Recipes</h1>
     <p>Chinese: Delicious & Quick recipes you can cook at home!</p></section>
     <section class="grid-desi-images">
-        <a href="/Posts/Chinese/Chow mein/Chow mein.html">
+        <a href="Posts/Chinese/Chow mein/Chow mein.html">
             <div class="image-container" data-title="Chicken Chow Mein">
-                <img src="/Posts/Chinese/Chow mein/Chow mein.jpg" alt="Chicken Chow Mein">
+                <img src="Posts/Chinese/Chow mein/Chow mein.jpg" alt="Chicken Chow Mein">
             </div>
         </a>
       
@@ -24,22 +24,22 @@
     <br>
     <div class="button-wrapper"> <div class="btn">
         <button>
-            <a href="/Pages/Category page/Categorypage.html">← Back to Categories</a>
+            <a href="Pages/Category page/Categorypage.html">← Back to Categories</a>
         </button>
     </div>
     <div class="btn">
         <button>
-            <a href="/Posts/Italian/Italian.html">Italian</a>
+            <a href="Posts/Italian/Italian.html">Italian</a>
         </button>
     </div>
 </div>
     <div id="footer"></div>
     <script>
-        fetch('/Theme/Header%20%26%20Footer/Header.html')
+        fetch('Theme/Header%20%26%20Footer/Header.html')
             .then(response => response.text())
             .then(data => document.getElementById("header").innerHTML = data);
     
-        fetch('/Theme/Header%20%26%20Footer/Footer.html')
+        fetch('Theme/Header%20%26%20Footer/Footer.html')
             .then(response => response.text())
             .then(data => document.getElementById("footer").innerHTML = data);
     </script>
