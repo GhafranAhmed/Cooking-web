@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - GlobalFood360</title>
-    <link rel="stylesheet" href="/Theme/Post Style.css">
-    <link rel="stylesheet" href="/Theme/About%20Us%20Style.css">
+    <link rel="stylesheet" href="Theme/Post Style.css">
+    <link rel="stylesheet" href="Theme/About%20Us%20Style.css">
 
 </head>
 <body>
 <div id="header"></div>
 
-<img src="/Pages/about us/Chef Ghafran Ahmed.png" alt="Global Food 360 About">
+<img src="Pages/about us/Chef Ghafran Ahmed.png" alt="Global Food 360 About">
 <main>
     <h1>About Me</h1>
 
@@ -33,11 +33,11 @@
 <div id="footer"></div>
 <!-- ✅ Fetch Header and Footer -->
 <script>
-    fetch('/Theme/Header%20%26%20Footer/Header.html')
+    fetch('Theme/Header%20%26%20Footer/Header.html')
         .then(response => response.text())
         .then(data => document.getElementById("header").innerHTML = data);
 
-    fetch('/Theme/Header%20%26%20Footer/Footer.html')
+    fetch('Theme/Header%20%26%20Footer/Footer.html')
         .then(response => response.text())
         .then(data => document.getElementById("footer").innerHTML = data);
 </script>
